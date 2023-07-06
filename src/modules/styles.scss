@@ -1,0 +1,151 @@
+body {
+  background: linear-gradient(90deg, #4286f4, #373b44);
+}
+
+.container {
+  text-align: center;
+  padding-top: 20px;
+  position: relative;
+}
+
+.card-body,
+.selected-card-body {
+  border: 1px solid gray;
+  margin: 10px 10px;
+  border-radius: 10px;
+  background-color: white;
+  .category_name {
+    padding-top: 20px;
+    color: #1e3a8a;
+    font-size: 24px;
+    margin: 0px;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  .jokes_tag {
+    padding-top: 0px;
+    color: #6b21a8;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding-bottom: 40px;
+  }
+}
+
+.card-body,
+.selected-card-body {
+  cursor: pointer;
+}
+
+.selected-card-body {
+  background-color: #94a3b8;
+  padding: 20px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-bounce {
+  color: #22c55e;
+  font-size: 36px;
+  font-family: sans-serif;
+  font-weight: bold;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.popup-container {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: calc(100vh - 450px);
+  z-index: 1;
+  padding: 0px 100px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .jokes_tag {
+    display: none;
+  }
+}
+
+.card-body {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.card-body:hover {
+  border: 1px solid black;
+}
+
+.popup {
+  border: 1px solid gray;
+  padding: 20px;
+  background: linear-gradient(90deg, #2c5364, #203a43, #0f2027);
+  border-radius: 5px;
+}
+
+.popup .header {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.popup .close_icon {
+  right: 130px;
+  position: absolute;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup .content {
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 20px;
+}
+.popup .content p {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.popup .content button span {
+  color: black;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
